@@ -12,15 +12,14 @@ async function getAddList() {
 
             const responsedata = await response.json();
 
-            console.log(responsedata.data.length);
+            // console.log(responsedata.data.length);
 
-            let listNomber = new Array();
+            // let listNomber = new Array();
 
-            
 
-            console.log(responsedata.data);
+            // console.log(responsedata.data);
 
-            console.log(listNomber);
+            // console.log(listNomber);
 
             
             

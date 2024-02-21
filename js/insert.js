@@ -36,7 +36,18 @@ async function handlesubmit() {
     
     try {
 
-        fetch("http://localhost:8080/notice_board/write",option);;
+        fetch("http://localhost:8080/notice_board/write",option);
+        // if(!response.ok) {
+        //     throw await response.json();
+        // }
+
+        // const responsedata = await response.json();
+
+        // console.log(responsedata.data);
+
+
+
+
     
     } catch(error) {
         console.log(error);
