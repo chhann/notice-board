@@ -36,15 +36,16 @@ async function handlesubmit() {
     
     try {
 
-        fetch("http://localhost:8080/notice_board/write",option);
-        // if(!response.ok) {
-        //     throw await response.json();
-        // }
+        const response = await fetch("http://localhost:8080/notice_board/write",option);
+        
+        if(!response.ok) {
+            throw await response.json();
+        }
 
-        // const responsedata = await response.json();
+        const responseData = await response.json();
 
-        // console.log(responsedata.data);
-
+        console.log(responseData);
+        alert(`${responseData.successCount}건의 글 추가 완료`);
 
 
 

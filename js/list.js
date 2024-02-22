@@ -12,31 +12,23 @@ async function getAddList() {
 
             const responsedata = await response.json();
 
-            // console.log(responsedata.data.length);
-
-            // let listNomber = new Array();
-
-
-            // console.log(responsedata.data);
-
-            // console.log(listNomber);
+            console.log(responsedata[0].title);
 
             
             
             const listData = document.querySelector(".board_list");
-            for(let i = 0; i < responsedata.data.length; i++) {
+
+            for(let i = 0; i < responsedata.length; i++) {
                 listData.innerHTML += `
                 <div>
                     <div class="num">${i+1}</div>
-                    <div class="title"><a href="view.html">${responsedata.data[i].title}</a></div>
-                    <div class="writer">${responsedata.data[i].writer}</div>
-                    <div class="date">${responsedata.data[i].date}</div>
+                    <div class="title"><a href="view.html?id=${responsedata[i].id}">${responsedata[i].title}</a></div>
+                    <div class="writer">${responsedata[i].writer}</div>
+                    <div class="date">${responsedata[i].date}</div>
                     <div class="count">33</div>
                 </div>
                 `
             }
-
-            
 
         } catch(error) {
                 console.log(error);
